@@ -9,4 +9,4 @@
 // Filter on ResourceProvider for logs specific to a service.
 AzureDiagnostics
 | where ResourceProvider =="MICROSOFT.KEYVAULT"
-| summarize count() by CallerIPAddress
+| summarize count() by CallerIPAddress | order by count_ desc
